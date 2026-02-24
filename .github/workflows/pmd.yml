@@ -15,11 +15,12 @@ jobs:
 
         - name: Run PMD analysis
           uses: pmd/pmd-github-action@v1
+          id: pmd
           with:
             rulesets: 'category/java/errorprone.xml'
             
         - name: Fail build if there are violations
-          if: steps.pmd.outputs.violations != 0
+          if: ${{steps.pmd.outputs.violations != '0'}}
           run: exit 1
         - name: Upload PMD report
           uses: actions/upload-artifact@v4
