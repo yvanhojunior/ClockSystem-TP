@@ -16,5 +16,5 @@ jobs:
         - name: Run PMD analysis
           uses: pmd/pmd-github-action@v1
           with:
-            rulesets: "category/java/errorprone.xml
+            rulesets: 'category/java/errorprone.xml'
             fail-on-violation: true
