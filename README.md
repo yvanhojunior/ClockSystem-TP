@@ -1,4 +1,4 @@
-![Gradle CI](https://github.com/yvanhojunior/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg))
+![Gradle CI](https://github.com/yvanhojunior/ClockSystem-TP/actions/workflows/gradle.yml/badge.svg)
 [![PMD code Analysis](https://github.com/yvanhojunior/ClockSystem-TP/actions/workflows/pmd.yml/badge.svg)](https://github.com/yvanhojunior/ClockSystem-TP/actions/workflows/pmd.yml)
 # ClockSystem
 
