@@ -13,14 +13,8 @@ jobs:
      steps:
         - uses: actions/checkout@v4
 
-        - name: Set up Java
-          uses: actions/setup-java@v4
-          with:
-            distribution: 'temurin'
-            java-version: '11'
-
         - name: Run PMD analysis
-          uses: pmd/pmd-github-action@v2
+          uses: pmd/pmd-github-action@v1
           id: pmd
           with:
             rulesets: 'category/java/errorprone.xml'
@@ -28,8 +22,3 @@ jobs:
         - name: Fail build if there are violations
           if: ${{ steps.pmd.outputs.violations != '0' }}
           run: exit 1
-
-        - name: Upload SARIF file
-          uses: github/codeql-action/upload-sarif@v3
-          with:
-            sarif_file: pmd-report.sarif
