@@ -17,6 +17,8 @@ jobs:
           uses: pmd/pmd-github-action@v1
           with:
             rulesets: 'category/java/errorprone.xml'
+            fail-on-violation: true
+            violation-threshold: 10
         - name: Upload PMD report
           uses: actions/upload-artifact@v4
           with:
