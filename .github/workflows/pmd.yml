@@ -22,8 +22,3 @@ jobs:
         - name: Fail build if there are violations
           if: ${{steps.pmd.outputs.violations != '0'}}
           run: exit 1
-        - name: Upload PMD report
-          uses: actions/upload-artifact@v4
-          with:
-            name: pmd-report
-            path: app/build/reports/pmd
